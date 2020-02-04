@@ -1,0 +1,470 @@
+        /* ----------------------- 
+
+#394C6D Bleu foncé
+#7487A7 Bleu clair
+#24281A "Noir"
+#675637 Marron foncé
+#AB7D54 Marron clair
+
+--------------------------*/
+        /*---------------------------
+
+-----------Général-----------
+
+----------------------------*/
+        
+        * {
+            margin: 0px;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-image: url(../images/hero_2.png);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        
+        @media all and (max-width: 1000px) {
+            body {
+                background-color: rgb(22, 45, 95);
+                background-image: none;
+            }
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .fond_bleu {
+            background-color: #7487A7;
+        }
+        
+        .titre {
+            color: white;
+            text-shadow: 10px 10px 10px #7487A7, 10px 10px 10px #24281A;
+        }
+        
+        .titre_section {
+            margin-top: 50px;
+        }
+        
+        h1 {
+            font-size: 100px;
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 50px;
+        }
+        /*--------------------------
+
+-----------Header-----------
+
+---------------------------*/
+        
+        #header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(45, 53, 65, 0.8);
+            height: 80px;
+            position: sticky;
+            border: 1px solid black;
+            z-index: 20;
+            top: 0px;
+        }
+        
+        @media all and (max-width: 1000px) {
+            #header {
+                background-color: rgba(45, 53, 65, 1);
+            }
+        }
+        
+        #header_menu {
+            font-size: 36px;
+        }
+        
+        #header a {
+            color: white;
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+        
+        @media all and (max-width: 1000px) {
+            #header {
+                flex-direction: column;
+                height: 200px;
+            }
+        }
+        /*---------------------------
+
+-----------Accueil-----------
+
+----------------------------*/
+        
+        #accueil {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-repeat: no-repeat;
+            height: 900px;
+        }
+        
+        #hero__titre {
+            font-size: 100px;
+        }
+        
+        #hero__sous_titre {
+            font-size: 50px;
+        }
+        
+        @media all and (max-width: 1000px) {
+            #hero__titre {
+                font-size: 60px;
+            }
+            #hero__sous_titre {
+                font-size: 25px;
+            }
+        }
+        /*----------------------------
+
+-----------A propos-----------
+
+-----------------------------*/
+        
+        #accueil_a_propos {
+            height: auto;
+            border-top: solid 5px black;
+            border-bottom: solid 5px black;
+            padding: 25px 0px;
+        }
+        
+        #accueil_a_propos p {
+            font-size: 30px;
+        }
+        
+        #propos_flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #photo_auteur {
+            margin: 50px 0px;
+        }
+        /*---------------------------
+
+-----------Billets-----------
+
+----------------------------*/
+        
+        #accueil_billet {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        #accueil_billet h2 {
+            margin-bottom: 100px;
+        }
+        
+        #accueil_billet_post {
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+        
+        .accueil_billet_post_precision {
+            width: 50%;
+            background-color: rgba(116, 135, 167, 1);
+            background-color: linear-gradient(229deg, rgba(116, 135, 167, 1) 50%, rgba(116, 135, 167, 0.5858718487394958) 100%);
+            border-top: 3px white solid;
+            border-right: 3px solid white;
+            border-radius: 20px;
+            margin: 25px 50px;
+            display: flex;
+            flex-direction: column;
+            padding: 0px 20px;
+            align-self: center;
+        }
+        
+        .accueil_billet_post_precision_titre {
+            margin: 20px 0px;
+            color: white;
+            text-decoration-line: underline;
+        }
+        
+        .accueil_billet_post_precision_texte__link {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .accueil_billet_post_precision_date {
+            margin: 15px 0px;
+        }
+        
+        @media all and (max-width: 1000px) {
+            .accueil_billet_post_precision {
+                width: 70%;
+            }
+        }
+        /*---------------------------
+
+---------Connexion------------
+
+----------------------------*/
+        
+        #formulaire {
+            background-color: rgba(45, 53, 65, 0.8);
+            text-align: center;
+            margin: 15% 30%;
+            padding: 30px;
+        }
+        
+        #connexion {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /*---------------------------
+
+-----------Admin-------------
+
+----------------------------*/
+        
+        #admin {
+            display: flex;
+            flex-direction: column;
+            margin: 2%;
+            background-color: rgba(45, 53, 65, 0.8);
+            text-align: center;
+        }
+        
+        #admin__texte {
+            margin: 20px 0px;
+        }
+        
+        #admin__buttons {
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        #admin__buttons button {
+            padding: 10px;
+            margin: 0px 10px;
+            background-color: rgba(45, 53, 65, 0.8);
+            color: white;
+            border: 1px white solid;
+            transition: background-color, color 0.5s ease;
+        }
+        
+        #admin__buttons button:hover {
+            padding: 10px;
+            margin: 0px 10px;
+            background-color: white;
+            color: rgba(45, 53, 65, 1);
+            border: 1px #243541 solid;
+        }
+        /*---------------------------
+
+-------nouveau_billet--------
+
+----------------------------*/
+        
+        #nouveau_billet {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin: 2%;
+            text-align: center;
+        }
+        
+        #nouveau_billet_texte_aide {
+            background-color: #FFFAEA;
+            padding: 10px 0px;
+            color: Black;
+            margin: 0% 20%;
+        }
+        
+        #nouveau_billet_form {
+            height: 600px;
+        }
+        
+        #nouveau_billet_boutton_retour {
+            margin: 10px 0px;
+        }
+        
+        #nouveau_billet_form_textarea {
+            height: 600px;
+        }
+        /*---------------------------
+
+-------Admin_posts-----------
+
+----------------------------*/
+        
+        #adminposts {
+            display: flex;
+            flex-direction: column;
+            margin: 2%;
+            background-color: rgba(45, 53, 65, 0.8);
+            text-align: center;
+        }
+        
+        #adminposts__text h3 {
+            margin-bottom: 25px;
+        }
+        
+        #adminposts__flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .adminposts__table_enter {
+            padding: 5px 10px;
+        }
+        
+        .adminposts__ligne {
+            background-color: rgba(45, 53, 65, 0);
+            transition: background-color, color 0.5s ease;
+        }
+        
+        .adminposts__ligne:hover {
+            background-color: rgba(45, 53, 65, 0.8);
+        }
+        
+        .adminposts__colone__titre {
+            font-size: 14px;
+        }
+        
+        .adminposts__colone__content p {
+            font-size: 14px;
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        /*---------------------------
+
+-------Lone_Article----------
+
+----------------------------*/
+        
+        #lone_article {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        #lone_article__article {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media all and (max-width: 1000px) {
+            #lone_article__article {
+                padding: 3%;
+            }
+        }
+        
+        #lone_article__article__title {
+            text-decoration: underline;
+            overflow-wrap: break-word;
+            margin: 5%;
+            width: 80%;
+            text-align: center;
+        }
+        
+        @media all and (max-width: 1000px) {
+            #lone_article__article__title {
+                font-size: 50px;
+            }
+        }
+        
+        .lone_article__comments {
+            margin: 10px 0px;
+            width: 30%;
+        }
+        
+        @media all and (max-width: 1000px) {
+            .lone_article__comments {
+                width: 100%;
+            }
+        }
+        
+        #lone_article__comments_full {
+            margin: 0% 2%;
+        }
+        
+        #lone_article__comments__title {
+            margin-top: 15px;
+        }
+        
+        .lone_article__comments__each,
+        .lone_article__comments__each__signaled {
+            border-bottom: solid white 2px;
+            padding: 5px 0px;
+        }
+        
+        .lone_article__comments__each__signalement {
+            color: white;
+            font-weight: bold;
+        }
+        
+        #lone_article__addcomments {
+            width: 300px;
+        }
+        
+        #lone_article__addcomments textarea {
+            width: 90%;
+        }
+        
+        @media all and (max-width: 300px) {
+            #lone_article__addcomments textarea {
+                width: 80%;
+            }
+        }
+        
+        .lone_article__comments__each__author__signaled,
+        .lone_article__comments__each__date__signaled,
+        .lone_article__comments__each__comment__signaled {
+            text-decoration: line-through;
+        }
+        /*---------------------------
+
+-----------Auteur------------
+
+----------------------------*/
+        
+        #auteur {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        #auteur__text {
+            margin-top: 75px;
+            padding: 0% 20% 5% 20%;
+        }
+        
+        .auteur__text__question_reponse {
+            margin: 20px 0px;
+        }
+        
+        .auteur__text__question_reponse_barre {
+            text-decoration: underline;
+        }
+        
+        .auteur__text__question_reponse a {
+            color: white;
+            text-decoration: underline;
+        }
