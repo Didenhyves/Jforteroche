@@ -45,6 +45,16 @@ class Backend {
         header ('location: ?action=accueil');
     }
 
+    public function administration()
+    {
+        if($_SESSION['useradmin']){
+            require('view/administration.php');
+        }
+        else{
+            header ('location: ?action=connexion');
+        }
+    }
+
     public function create_posts()
     {
         $Posts = new Posts();
@@ -88,6 +98,21 @@ class Backend {
             header("location: ?action=admin_posts");
         }
     }
+
+    public function admin_posts()
+    {
+        $Posts = new Posts();
+        $posts_articles = $Posts->get_all_posts();
+        $title = 'administration';
+        require('view/admin_posts.php');
+    }
+
+    public function add_comment()
+    {
+        $Comments = new Comments();
+        $Comments->add_comment($_POST['post_id'], $_POST['author'], $_POST['comment']);
+        header('Location: ?action=lone_article&id=' . $_POST['post_id']);
+    }
     
     public function lone_article()
     {
@@ -113,5 +138,38 @@ class Backend {
         }
     }
 
-    
+    public function signalement()
+    {
+        $Posts = new Posts();
+        $Comments = new Comments();
+        $signalement_incr = $_POST['signalement'];
+        $signalement_incr++;
+        $comments_display = $Comments->signalement($signalement_incr, $_POST['id']); 
+        header('Location: ?action=lone_article&id=' . $_POST['post_id']);
+    }
+
+    public function admin_comments()
+    {
+        $Comments = new Comments();
+        $comments_selected = $Comments->get_all_comments();
+        require('view/admin_comments.php');
+    }
+
+    public function delete_comment()
+    {
+        if(isset($_GET['id'])){
+            $Comments = new Comments();
+            $Comments->delete_comment($_GET['id']);
+            header("location: ?action=admin_comments");
+        }
+    }
+
+    public function valid_comment()
+    {
+        if(isset($_GET['id'])){
+            $Comments = new Comments();
+            $Comments->valid_comment($_GET['id']);
+            header("location: ?action=admin_comments");
+        }
+    }
 }
