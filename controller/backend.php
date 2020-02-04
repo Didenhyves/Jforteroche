@@ -6,7 +6,44 @@ require_once('model/Posts.php');
 
 class Backend {
 
-    
+    public function connexion()
+    {
+        
+        if ($_POST)
+        {
+            $User_check = new User_check();
+            $user = $User_check->check_pass($_POST['pseudo'], $_POST['password']);
+            if($user){
+                
+                // Instancie la session
+                
+                $_SESSION['useradmin'] = $user->id;
+                // Redirige la vue
+                header ('location: ?action=espace_admin'); 
+            }
+            else{
+                $_SESSION['msg'] = array(
+                    'type'  => 'danger',
+                    'message'   => "Vous n'êtes pas connecté en tant qu'Admin"
+                );
+                header ('location: ?action=connexion');
+            }
+        }
+        else {
+            if(isset($_SESSION['useradmin'])){
+                header ('location: ?action=espace_admin');
+            }
+            else{
+                require('view/connexion.php');
+            }
+        }
+    }
+
+    public function deconnexion()
+    {
+        unset($_SESSION['useradmin']);
+        header ('location: ?action=accueil');
+    }
 
     public function create_posts()
     {
