@@ -5,9 +5,9 @@
     <meta charset="utf-8" />
     <title>Connexion</title>
     <link rel="shortcut icon" type="image/png" href="images/logo.png">
-    <!--Ici mettre le logo-->
+    
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <!--Ici mettre le CSS-->
+    
 </head>
 
 <body>

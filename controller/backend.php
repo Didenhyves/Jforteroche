@@ -18,7 +18,6 @@ class Backend {
                 // Instancie la session
                 
                 $_SESSION['useradmin'] = $user->id;
-                // Redirige la vue
                 header ('location: ?action=espace_admin'); 
             }
             else{

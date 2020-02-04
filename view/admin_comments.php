@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Connexion</title>
+    <title>Administration</title>
     <link rel="shortcut icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>

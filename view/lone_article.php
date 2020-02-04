@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Billet&nbsp;simple&nbsp;pour&nbsp;l'Alaska</title>
+    <title> <?php echo $post_article->title; ?></title>
     <link rel="shortcut icon" type="image/png" href="images/logo.png">
-    <!--Ici mettre le logo-->
+    
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <!--Ici mettre le CSS-->
+    
 </head>
 
 <body>

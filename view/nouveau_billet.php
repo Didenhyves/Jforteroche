@@ -3,11 +3,9 @@
 
 <head>
 <meta charset="utf-8" />
-    <title>Billet&nbsp;simple&nbsp;pour&nbsp;l'Alaska</title>
+    <title>Écrire un chapitre</title>
     <link rel="shortcut icon" type="image/png" href="images/logo.png">
-    <!--Ici mettre le logo-->
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <!--Ici mettre le CSS-->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({

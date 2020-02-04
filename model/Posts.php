@@ -10,26 +10,20 @@ class Posts extends Manager{
     }
 
     public function get_post($id){
-        //requete SQL
         $posts_one = $this->db->query("SELECT * FROM posts WHERE id = $id");
         $post_display_one = $posts_one->fetch();
-        //
         return $post_display_one;
     }
 
     public function get_all_posts(){
-        //requete SQL
         $posts_full = $this->db->query('SELECT * FROM posts');
         $post_display = $posts_full->fetchAll();
-        //
         return $post_display;
     }
 
     public function get_post_by_id($id){
-        //requete SQL
         $post_display = $this->db->query("SELECT * FROM posts WHERE id = $id");
         $post_sorted = $post_display->fetch();
-        //
         return $post_sorted;
     }
 

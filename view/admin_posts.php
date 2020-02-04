@@ -1,5 +1,3 @@
-
-
 <?php require('templates/header.php'); ?>
 <?php require('templates/admin_buttons.php'); ?>
 <div id="adminposts">

@@ -1,5 +1,4 @@
 <div id="accueil_billet_post">
-            <!--Pour les posts-->
             <?php  if(!empty($posts_articles)): ?> 
                 <?php foreach ($posts_articles as $article): ?>
                     <div class="accueil_billet_post_precision">
