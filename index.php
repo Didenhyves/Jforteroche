@@ -4,70 +4,69 @@ session_start();
 
 require('controller/frontend.php');
 require('controller/backend.php');
+require('controller/connexion.php');
 
-$frontend = new Frontend();
-$backend = new Backend();
 
 try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'accueil') {
-            $frontend->home();
+            (new Frontend)->home();
         }
         elseif ($_GET['action'] == 'connexion'){
-            $backend->connexion();
+            (new Connexion)->connect();
         }
         elseif ($_GET['action'] == 'espace_admin'){
-            $backend->administration();
+            (new Backend)->administration();
         }
         elseif($_GET['action'] == 'deconnexion'){
-            $backend->deconnexion();
+            (new Backend)->deconnexion();
         }
         elseif($_GET['action'] == 'chapitres'){
-            $frontend->chapitres();
+            (new Frontend)->chapitres();
         }
         elseif($_GET['action'] == 'auteur'){
-            $frontend->auteur();
+            (new Frontend)->auteur();
         }
         elseif($_GET['action'] == 'nouveau_billet'){
-            $frontend->nouveau_billet();
+            (new Backend)->nouveau_billet();
         }   
         elseif($_GET['action'] == 'create_post'){
-            $backend->create_posts();
+            (new Backend)->create_posts();
         }
         elseif($_GET['action'] == 'update_view'){
-            $backend->update_billet_view();
+            (new Backend)->update_billet_view();
         }
         elseif($_GET['action'] == 'update_post'){
-            $backend->update_post();
+            (new Backend)->update_post();
         }
         elseif($_GET['action'] == 'admin_posts'){
-            $backend->admin_posts();
+            (new Backend)->admin_posts();
         }
         elseif($_GET['action'] == 'delete_post'){
-            $backend->delete_post();
+            (new Backend)->delete_post();
         }
         elseif($_GET['action'] == 'lone_article'){
-            $backend->lone_article();
+            (new Frontend)->lone_article();
         }
         elseif($_GET['action'] == 'add_comment'){
-            $backend->add_comment();
+            (new Frontend)->add_comment();
         }
         elseif($_GET['action'] == 'signalement'){
-            $backend->signalement();
+            (new Frontend)->signalement();
         }
         elseif($_GET['action'] == 'admin_comments'){
-            $backend->admin_comments();
+            (new Backend)->admin_comments();
         }
         elseif($_GET['action'] == 'delete_comment'){
-            $backend->delete_comment();
+            (new Backend)->delete_comment();
         }
         elseif($_GET['action'] == 'valid_comment'){
-            $backend->valid_comment();
+            (new Backend)->valid_comment();
         }
     }
 
     else{
-        $frontend->home();
+        (new Frontend)->home();
     }
 }
 catch(Exception $e) { 

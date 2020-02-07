@@ -23,8 +23,44 @@ class Frontend {
         require('view/auteur.php');
     }
 
-    public function nouveau_billet()
+    public function add_comment()
     {
-        require('view/nouveau_billet.php');
+        $Comments = new Comments();
+        $Comments->add_comment($_POST['post_id'], $_POST['author'], $_POST['comment']);
+        header('Location: ?action=lone_article&id=' . $_POST['post_id']);
+    }
+    
+    public function lone_article()
+    {
+        if(isset($_GET['id']))
+        {
+        $Posts = new Posts();
+        $Comments = new Comments();
+        $post_article = $Posts->get_post($_GET['id']);
+        $comments_display = $Comments->get_comments($_GET['id']);
+        
+            if(!empty($post_article))
+            {
+            require('view/lone_article.php');
+            }
+            else
+            {
+                echo 'Lien invalide';
+            }
+        }
+            else
+        {
+            echo 'Lien invalide';
+        }
+    }
+
+    public function signalement()
+    {
+        $Posts = new Posts();
+        $Comments = new Comments();
+        $signalement_incr = $_POST['signalement'];
+        $signalement_incr++;
+        $comments_display = $Comments->signalement($signalement_incr, $_POST['id']); 
+        header('Location: ?action=lone_article&id=' . $_POST['post_id']);
     }
 }

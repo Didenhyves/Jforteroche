@@ -11,7 +11,6 @@
 <body>
 
 <?php require('templates/header.php'); ?>
-
 <div id="admin">
     <div id="admin__texte">       
         <h2>Panneau d'administration :</h2>
